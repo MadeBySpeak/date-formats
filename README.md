@@ -65,6 +65,7 @@ A running list of date formats based on language/library for reference.
 ## [Moment](#moment) 
 ([source](http://momentjs.com/docs/#/parsing/string-format/))
 
+<h4 id="year-month-and-day-tokens">Year, month, and day tokens</h4>
 <table>
 <thead>
 <tr>
@@ -128,6 +129,115 @@ A running list of date formats based on language/library for reference.
 <td><code>x</code></td>
 <td><code>1410715640579</code></td>
 <td>Unix ms timestamp</td>
+</tr>
+</tbody>
+</table>
+<p><code>YYYY</code> from version <strong>2.10.5</strong> supports 2 digit years, and converts them to a year
+near 2000 (same as <code>YY</code>).</p>
+<p><code>Y</code> was added in <strong>2.11.1</strong>. It will match any number, signed or unsigned. It is useful for years that are not 4 digits or are before the common era. It can be used for any year.</p>
+
+<h4 id="week-year-week-and-weekday-tokens">Week year, week, and weekday tokens</h4>
+<p>For these, the lowercase tokens use the locale aware week start days, and the uppercase tokens use the <a href="http://en.wikipedia.org/wiki/ISO_week_date">ISO week date</a> start days.</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gggg</code></td>
+<td><code>2014</code></td>
+<td>Locale 4 digit week year</td>
+</tr>
+<tr>
+<td><code>gg</code></td>
+<td><code>14</code></td>
+<td>Locale 2 digit week year</td>
+</tr>
+<tr>
+<td><code>w ww</code></td>
+<td><code>1..53</code></td>
+<td>Locale week of year</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td><code>0..6</code></td>
+<td>Locale day of week</td>
+</tr>
+<tr>
+<td><code>ddd dddd</code></td>
+<td><code>Mon...Sunday</code></td>
+<td>Day name in locale set by <code>moment.locale()</code></td>
+</tr>
+<tr>
+<td><code>GGGG</code></td>
+<td><code>2014</code></td>
+<td>ISO 4 digit week year</td>
+</tr>
+<tr>
+<td><code>GG</code></td>
+<td><code>14</code></td>
+<td>ISO 2 digit week year</td>
+</tr>
+<tr>
+<td><code>W WW</code></td>
+<td><code>1..53</code></td>
+<td>ISO week of year</td>
+</tr>
+<tr>
+<td><code>E</code></td>
+<td><code>1..7</code></td>
+<td>ISO day of week</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hour-minute-second-millisecond-and-offset-tokens">Hour, minute, second, millisecond, and offset tokens</h4>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>H HH</code></td>
+<td><code>0..23</code></td>
+<td>24 hour time</td>
+</tr>
+<tr>
+<td><code>h hh</code></td>
+<td><code>1..12</code></td>
+<td>12 hour time used with <code>a A</code>.</td>
+</tr>
+<tr>
+<td><code>a A</code></td>
+<td><code>am pm</code></td>
+<td>Post or ante meridiem (Note the one character <code>a p</code> are also considered valid)</td>
+</tr>
+<tr>
+<td><code>m mm</code></td>
+<td><code>0..59</code></td>
+<td>Minutes</td>
+</tr>
+<tr>
+<td><code>s ss</code></td>
+<td><code>0..59</code></td>
+<td>Seconds</td>
+</tr>
+<tr>
+<td><code>S SS SSS</code></td>
+<td><code>0..999</code></td>
+<td>Fractional seconds</td>
+</tr>
+<tr>
+<td><code>Z ZZ</code></td>
+<td><code>+12:00</code></td>
+<td>Offset from UTC as <code>+-HH:mm</code>, <code>+-HHmm</code>, or <code>Z</code></td>
 </tr>
 </tbody>
 </table>
