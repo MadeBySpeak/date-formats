@@ -6,7 +6,7 @@ A running list of date formats based on language/library for reference.
 - [Ruby](#ruby)
 - [JS](#js)
  - [Moment](#moment)
-
+ - [Angular 1.X](#angular1)
 
 
 
@@ -241,3 +241,60 @@ near 2000 (same as <code>YY</code>).</p>
 </tr>
 </tbody>
 </table>
+
+## [Angular 1.X](#angular1)
+
+([source](https://docs.angularjs.org/api/ng/filter/date))
+
+<div class="api-profile-description ng-scope">
+  <p>Formats <code><span class="pln">date</span></code> to a string based on the requested <code><span class="pln">format</span></code>.</p>
+<p>  <code><span class="pln">format</span></code> string can be composed of the following elements:</p>
+<ul>
+<li><code><span class="str">'yyyy'</span></code>: 4 digit representation of year (e.g. AD 1 =&gt; 0001, AD 2010 =&gt; 2010)</li>
+<li><code><span class="str">'yy'</span></code>: 2 digit representation of year, padded (00-99). (e.g. AD 2001 =&gt; 01, AD 2010 =&gt; 10)</li>
+<li><code><span class="str">'y'</span></code>: 1 digit representation of year, e.g. (AD 1 =&gt; 1, AD 199 =&gt; 199)</li>
+<li><code><span class="str">'MMMM'</span></code>: Month in year (January-December)</li>
+<li><code><span class="str">'MMM'</span></code>: Month in year (Jan-Dec)</li>
+<li><code><span class="str">'MM'</span></code>: Month in year, padded (01-12)</li>
+<li><code><span class="str">'M'</span></code>: Month in year (1-12)</li>
+<li><code><span class="str">'LLLL'</span></code>: Stand-alone month in year (January-December)</li>
+<li><code><span class="str">'dd'</span></code>: Day in month, padded (01-31)</li>
+<li><code><span class="str">'d'</span></code>: Day in month (1-31)</li>
+<li><code><span class="str">'EEEE'</span></code>: Day in Week,(Sunday-Saturday)</li>
+<li><code><span class="str">'EEE'</span></code>: Day in Week, (Sun-Sat)</li>
+<li><code><span class="str">'HH'</span></code>: Hour in day, padded (00-23)</li>
+<li><code><span class="str">'H'</span></code>: Hour in day (0-23)</li>
+<li><code><span class="str">'hh'</span></code>: Hour in AM/PM, padded (01-12)</li>
+<li><code><span class="str">'h'</span></code>: Hour in AM/PM, (1-12)</li>
+<li><code><span class="str">'mm'</span></code>: Minute in hour, padded (00-59)</li>
+<li><code><span class="str">'m'</span></code>: Minute in hour (0-59)</li>
+<li><code><span class="str">'ss'</span></code>: Second in minute, padded (00-59)</li>
+<li><code><span class="str">'s'</span></code>: Second in minute (0-59)</li>
+<li><code><span class="str">'sss'</span></code>: Millisecond in second, padded (000-999)</li>
+<li><code><span class="str">'a'</span></code>: AM/PM marker</li>
+<li><code><span class="str">'Z'</span></code>: 4 digit (+sign) representation of the timezone offset (-1200-+1200)</li>
+<li><code><span class="str">'ww'</span></code>: Week of year, padded (00-53). Week 01 is the week with the first Thursday of the year</li>
+<li><code><span class="str">'w'</span></code>: Week of year (0-53). Week 1 is the week with the first Thursday of the year</li>
+<li><code><span class="str">'G'</span></code>, <code><span class="str">'GG'</span></code>, <code><span class="str">'GGG'</span></code>: The abbreviated form of the era string (e.g. 'AD')</li>
+<li><p><code><span class="str">'GGGG'</span></code>: The long form of the era string (e.g. 'Anno Domini')</p>
+<p><code><span class="pln">format</span></code> string can also be one of the following predefined
+<a href="guide/i18n">localizable formats</a>:</p>
+</li>
+<li><p><code><span class="str">'medium'</span></code>: equivalent to <code><span class="str">'MMM d, y h:mm:ss a'</span></code> for en_US locale
+(e.g. Sep 3, 2010 12:05:08 PM)</p>
+</li>
+<li><code><span class="str">'short'</span></code>: equivalent to <code><span class="str">'M/d/yy h:mm a'</span></code> for en_US  locale (e.g. 9/3/10 12:05 PM)</li>
+<li><code><span class="str">'fullDate'</span></code>: equivalent to <code><span class="str">'EEEE, MMMM d, y'</span></code> for en_US  locale
+(e.g. Friday, September 3, 2010)</li>
+<li><code><span class="str">'longDate'</span></code>: equivalent to <code><span class="str">'MMMM d, y'</span></code> for en_US  locale (e.g. September 3, 2010)</li>
+<li><code><span class="str">'mediumDate'</span></code>: equivalent to <code><span class="str">'MMM d, y'</span></code> for en_US  locale (e.g. Sep 3, 2010)</li>
+<li><code><span class="str">'shortDate'</span></code>: equivalent to <code><span class="str">'M/d/yy'</span></code> for en_US locale (e.g. 9/3/10)</li>
+<li><code><span class="str">'mediumTime'</span></code>: equivalent to <code><span class="str">'h:mm:ss a'</span></code> for en_US locale (e.g. 12:05:08 PM)</li>
+<li><p><code><span class="str">'shortTime'</span></code>: equivalent to <code><span class="str">'h:mm a'</span></code> for en_US locale (e.g. 12:05 PM)</p>
+<p><code><span class="pln">format</span></code> string can contain literal values. These need to be escaped by surrounding with single quotes (e.g.
+<code><span class="str">"h 'in the morning'"</span></code>). In order to output a single quote, escape it - i.e., two single quotes in a sequence
+(e.g. <code><span class="str">"h 'o''clock'"</span></code>).</p>
+</li>
+</ul>
+
+</div>
