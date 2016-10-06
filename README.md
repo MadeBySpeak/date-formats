@@ -6,7 +6,7 @@ A running list of date formats based on language/library for reference.
 - [Ruby](#ruby)
 - [JS](#js)
  - [Moment](#moment)
- - [Angular 1.X](#angular1)
+ - [Angular 1.X](#angular-1x)
 
 
 
@@ -242,7 +242,7 @@ near 2000 (same as <code>YY</code>).</p>
 </tbody>
 </table>
 
-## [Angular 1.X](#angular1)
+## [Angular 1.X](angular-1x)
 
 ([source](https://docs.angularjs.org/api/ng/filter/date))
 
